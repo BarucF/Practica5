@@ -17,8 +17,7 @@ public class Llenado extends Maquina {
 		this.regulacionMililitros = regulacionMililitros;
 	}
 	public float costoLlenado() {
-		float costoLlenado = 0F;
-		return costoLlenado=((.25F*super.getCosto())/100)/this.envasesXminuto;
+		return ((.25F*super.getCosto())/100)/this.envasesXminuto;
 
 	}
 
