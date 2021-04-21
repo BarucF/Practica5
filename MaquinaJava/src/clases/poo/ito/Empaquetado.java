@@ -18,10 +18,9 @@ public class Empaquetado extends Maquina {
 	}
 
 
-	public float costoEmpaquetado(float costo, int tipoEmpaque, int cantidadXminuto) {
+	public float costoEmpaquetado() {
 		float costoEmpaquetado = 0F;
-		costoEmpaquetado=((.06F*costo)/100)/(cantidadXminuto*tipoEmpaque);
-		return costoEmpaquetado;
+		return costoEmpaquetado=((.06F*super.getCosto())/100)/(this.cantidadXminuto*this.tipoEmpaque);
 
 	}
 

@@ -21,12 +21,9 @@ public class Lavado extends Maquina {
 	}
 
 
-	public float costoLavado(float costo, int tiempoCicloLavado) {
+	public float costoLavado() {
 		float costoLavado = 0F;
-		int botellasXminuto;
-		botellasXminuto=60/tiempoCicloLavado;
-		costoLavado=((.05F*costo)/100)/botellasXminuto;
-		return costoLavado;
+		return costoLavado=((.05F*super.getCosto())/100)/(60/this.tiempoCicloLavado);
 
 	}
 

@@ -16,12 +16,9 @@ public class Llenado extends Maquina {
 		this.envasesXminuto = envasesXminuto;
 		this.regulacionMililitros = regulacionMililitros;
 	}
-
-	Maquina maquina= new Maquina();
-	public float costoLlenado(float costo, int envasesXminuto) {
+	public float costoLlenado() {
 		float costoLlenado = 0F;
-		costoLlenado=((.25F*costo)/100)/envasesXminuto;
-		return costoLlenado;
+		return costoLlenado=((.25F*super.getCosto())/100)/this.envasesXminuto;
 
 	}
 
