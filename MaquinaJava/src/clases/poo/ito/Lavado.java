@@ -1,16 +1,9 @@
-
 package clases.poo.ito;
-
 import java.time.LocalDate;
 
 public class Lavado extends Maquina {
 
-	
-
-
 	private float capacidad = 0F;
-
-
 	private int tiempoCicloLavado = 0;
 
 
@@ -22,7 +15,8 @@ public class Lavado extends Maquina {
 
 
 	public float costoLavado() {
-		return ((.05F*super.getCosto())/100)/(60/this.tiempoCicloLavado);
+		
+		return ((.05F*this.getCosto())/100)/(60/this.tiempoCicloLavado);
 
 	}
 

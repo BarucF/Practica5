@@ -1,24 +1,21 @@
 package clases.poo.ito;
-
 import java.time.LocalDate;
 
 public class Llenado extends Maquina {
-
 	
 	private int envasesXminuto = 0;
-
-
 	private String regulacionMililitros= "";
-	
 
-	public Llenado(String descripcion, LocalDate fechaAdquisicion, float costo,int envasesXminuto, String regulacionMililitros) {
+	public Llenado(float costo, LocalDate fechaAdquisicion, String descripcion,int envasesXminuto, String regulacionMililitros) {
 		super(costo,fechaAdquisicion,descripcion);
 		this.envasesXminuto = envasesXminuto;
 		this.regulacionMililitros = regulacionMililitros;
 	}
+	
 	public float costoLlenado() {
-		return ((.25F*super.getCosto())/100)/this.envasesXminuto;
-
+		
+		return ((.25F*this.getCosto())/100)/this.envasesXminuto;
+		
 	}
 
 
@@ -42,7 +39,8 @@ public class Llenado extends Maquina {
 
 	@Override
 	public String toString() {
-		return "Llenado y envasado [envasesXminuto=" + envasesXminuto + ", regulacionMililitros=" + regulacionMililitros +" "+ super.toString()+"]";
+		return "Llenado y envasado [envasesXminuto=" + envasesXminuto + ", regulacionMililitros=" + regulacionMililitros +" "
+	    + super.toString()+"]";
 	}
 
 }
